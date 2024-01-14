@@ -15,8 +15,6 @@ use App\Http\Controllers\StockController;
 |
 */
 
-use App\Http\Controllers\HomeController;
-Route::get('/get-stock', [HomeController::class, 'getStock']);
 Route::get('/stock', [StockController::class, 'index'])->name('stock');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

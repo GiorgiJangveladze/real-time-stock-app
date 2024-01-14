@@ -28,7 +28,6 @@
     function updateStockData(data) {
         const stockDataDiv = document.getElementById('stockData');
         stockDataDiv.innerHTML = '';
-        console.log('data', data)
         data?.forEach(item => {
             const companyName = item.report_date;
             const price = parseFloat(item.close);

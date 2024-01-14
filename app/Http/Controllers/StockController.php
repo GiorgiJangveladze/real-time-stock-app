@@ -10,7 +10,7 @@ class StockController extends Controller
     public function index() {
         try {
             $data = Cache::get('stock_data');
-            if (empty($data)) {
+            if (!$data) {
                 $data = Stock::stockPriceData();
             }
             return response()->json(['data' => StockResource::collection($data)], 200);
